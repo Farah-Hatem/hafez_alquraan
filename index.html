@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق حافظ القرآن - رحلتك لتثبيت كتاب الله</title>
+    <!-- خط Cairo المميز للتطبيقات العربية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1b4d3e; /* أخضر قرآني فاخر */
+            --accent-color: #d4af37;  /* ذهبي هادئ */
+            --text-dark: #1f2937;
+            --text-light: #4b5563;
+            --bg-light: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* الهيدر */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: var(--accent-color);
+        }
+
+        /* القسم الرئيسي */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 5% 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 80vh;
+            gap: 3rem;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            color: var(--primary-color);
+            line-height: 1.3;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 550px;
+        }
+
+        /* المميزات السريعة */
+        .features-list {
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .features-list i {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        /* زر التحميل من جوجل بلاي */
+        .btn-google-play {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 0.9rem 2rem;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-google-play:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 25px rgba(27, 77, 62, 0.25);
+            background-color: var(--primary-color);
+        }
+
+        .btn-google-play i {
+            font-size: 2.2rem;
+            color: #fff;
+        }
+
+        .btn-text {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        .btn-text .small-text {
+            font-size: 0.8rem;
+            opacity: 0.85;
+        }
+
+        .btn-text .bold-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        /* واجهة الهاتف */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image img {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 4px solid #ffffff;
+        }
+
+        /* الفوتر */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            background-color: #ffffff;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* التجاوب مع الجوال */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 1rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.1rem;
+            }
+
+            .hero-text p {
+                margin: 0 auto 1.5rem auto;
+            }
+
+            .features-list {
+                display: inline-block;
+                text-align: right;
+            }
+
+            .btn-text {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-book-quran"></i>
+            <span>حافظ القرآن</span>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <main class="hero">
+        <div class="hero-text">
+            <h1>رفيقك التفاعلي لتحفيظ وتثبيت القرآن الكريم</h1>
+            <p>سقِط خطتك اليومية، وراجع حفظك بسهولة ومتابعة مستمرة لتكون من أهل القرآن الذين هم أهل الله وخاصته.</p>
+            
+            <!-- قائمة مميزات بسيطة -->
+            <ul class="features-list">
+                <li><i class="fa-solid fa-circle-check"></i> خطط حفظ ومراجعة مخصصة لجدولك</li>
+                <li><i class="fa-solid fa-circle-check"></i> متابعة للتكرار والتثبيت اليومي</li>
+                <li><i class="fa-solid fa-circle-check"></i> واجهة سهلة وخالية من الإعلانات المزعجة</li>
+            </ul>
+
+            <!-- زر جوجل بلاي -->
+            <a href="https://play.google.com/store/apps/details?id=com.farah.computerinfo.hafezalquraan" class="btn-google-play" target="_blank">
+                <i class="fa-brands fa-google-play"></i>
+                <div class="btn-text">
+                    <span class="small-text">حمله الآن من</span>
+                    <span class="bold-text">Google Play</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- صورة معاينة التطبيق -->
+        <div class="hero-image">
+            <!-- استبدل هذا الرابط برابط صورة واجهة تطبيقك -->
+            <img src="https://play-lh.googleusercontent.com/RsUUkOvB00jxzoQAjKefEe2Zr2qEE0vFjFbVFPQ66Gt_Svo1ld6r-B7Bnhk-kElV2tIdZezN4XKSjjJ_xlTA=w480-h960-rw" alt="واجهة تطبيق حافظ القرآن">
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; تطبيق حافظ القرآن</p>
+    </footer>
+
+</body>
+</html>
